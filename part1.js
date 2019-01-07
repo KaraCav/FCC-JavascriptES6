@@ -35,3 +35,17 @@ function freezeObj() {
   return MATH_CONSTANTS.PI;
 }
 const PI = freezeObj();
+
+// 4. Use Arrow Functions to Write Concise Anonymous Functions
+var magic = function() {
+  "use strict";
+  return new Date();  };
+// Becomes:
+const magic = () => new Date();
+
+// 5. Write Arrow Functions with Parameters
+var myConcat = function(arr1, arr2) {
+  "use strict";
+  return arr1.concat(arr2);  };
+// Becomes:
+const myConcat = (arr1, arr2) => arr1.concat(arr2);
