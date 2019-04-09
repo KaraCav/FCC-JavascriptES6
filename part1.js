@@ -49,3 +49,12 @@ var myConcat = function(arr1, arr2) {
   return arr1.concat(arr2);  };
 // Becomes:
 const myConcat = (arr1, arr2) => arr1.concat(arr2);
+
+
+// 6. Use '=>' syntax to compute the square of only the positive integers in realNumberArray and store new array in squaredIntegers.
+const realNumberArray = [4, 5.6, -9.8, 3.14, 42, 6, 8.34, -2];
+const squareList = (arr) => {
+  const squaredIntegers = arr.filter((item) => (item === Math.floor(item) && item > 0)).map((item)=> item * item);
+  return squaredIntegers;
+};
+const squaredIntegers = squareList(realNumberArray);
