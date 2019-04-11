@@ -58,3 +58,10 @@ const squareList = (arr) => {
   return squaredIntegers;
 };
 const squaredIntegers = squareList(realNumberArray);
+
+// 7. Default Parameters- give the second parameter a value in the case that one isn't passed in 
+const increment = (function() {
+  return function increment(number = number, value = 1) {
+    return number + value;
+  };
+})();
