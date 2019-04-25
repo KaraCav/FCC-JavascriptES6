@@ -73,3 +73,11 @@ const sum = (function() {
   };
 })();
 console.log(sum(1, 2, 3)); // 6
+
+// 9. Spread Operator- allows us to expand arrays and other expressions in places where multiple parameters or elements are expected
+// ...arr returns an unpacked array [3,4] => 3,4. In other words, it spreads the array.
+const arr1 = ['JAN', 'FEB', 'MAR', 'APR', 'MAY'];
+let arr2;
+(function() {
+  arr2 = [...arr1]; 
+})();
