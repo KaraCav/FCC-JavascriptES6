@@ -65,3 +65,11 @@ const increment = (function() {
     return number + value;
   };
 })();
+
+// 8. Use the Rest Operator- eliminates the need to check the args array and allows map(), filter() and reduce() on the params array.
+const sum = (function() {
+  return function sum(...args) {
+    return args.reduce((a, b) => a + b, 0); 
+  };
+})();
+console.log(sum(1, 2, 3)); // 6
