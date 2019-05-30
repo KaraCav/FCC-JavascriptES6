@@ -81,3 +81,13 @@ let arr2;
 (function() {
   arr2 = [...arr1]; 
 })();
+
+// 10. ES6: Create Strings using Template Literals
+const result = {
+  failure: ["no-var", "var-on-top", "linebreak"],
+};
+function makeList(arr) {
+  const resultDisplayArray = arr.map(item => `<li class="text-warning">${item}</li>`);
+  return resultDisplayArray;
+}
+const resultDisplayArray = makeList(result.failure);
