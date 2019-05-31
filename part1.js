@@ -82,7 +82,7 @@ let arr2;
   arr2 = [...arr1]; 
 })();
 
-// 10. ES6: Create Strings using Template Literals
+// 10. Create Strings using Template Literals
 const result = {
   failure: ["no-var", "var-on-top", "linebreak"],
 };
@@ -91,3 +91,16 @@ function makeList(arr) {
   return resultDisplayArray;
 }
 const resultDisplayArray = makeList(result.failure);
+
+// 11. Write Concise Object Literal Declarations Using Simple Fields
+const createPerson = (name, age, gender) => {
+  "use strict";
+  return { name,age,gender };};
+console.log(createPerson("Zodiac Hasbro", 56, "male")); 
+
+// 12. Write Concise Declarative Functions with ES6
+const bicycle = {
+  gear: 2,
+  setGear(newGear) {
+    "use strict";
+    this.gear = newGear; } };
