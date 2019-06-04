@@ -115,3 +115,24 @@ function makeClass() {
 }
 const Vegetable = makeClass();
 const carrot = new Vegetable('carrot');
+
+// 14. ES6: Use getters and setters to Control Access to an Object
+function makeClass() {
+  class Thermostat {
+    constructor(temp){
+      this.temp= temp;
+    }
+      get temperature(){
+        return 5/9 *(this.temp- 32);
+    }
+    set temperature(temp){
+      this.temp = temp;
+    }
+  }
+  return Thermostat;
+}
+const Thermostat = makeClass();
+const thermos = new Thermostat(76); // setting in Fahrenheit scale
+let temp = thermos.temperature; // 24.44 in C
+thermos.temperature = 26;
+temp = thermos.temperature; // 26 in C
