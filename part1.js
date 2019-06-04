@@ -104,3 +104,14 @@ const bicycle = {
   setGear(newGear) {
     "use strict";
     this.gear = newGear; } };
+// 13. ES6: Use class Syntax to Define a Constructor Function
+function makeClass() {
+  class Vegetable {
+    constructor(name) {
+      this.name = name;
+    }
+  }
+  return Vegetable;
+}
+const Vegetable = makeClass();
+const carrot = new Vegetable('carrot');
