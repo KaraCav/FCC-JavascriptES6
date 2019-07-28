@@ -152,3 +152,19 @@ function getTempOfTmrw(avgTemperatures) {
   const {tomorrow : tempOfTomorrow} = avgTemperatures;
   return tempOfTomorrow;
 }
+
+// 17. ES6: Use Destructuring Assignment to Assign Variables from Nested Objects- Use destructuring assignment 
+// to obtain max of forecast.tomorrow and assign it to maxOfTomorrow.
+const LOCAL_FORECAST = {
+  today: { min: 72, max: 83 },
+  tomorrow: { min: 73.3, max: 84.6 }
+};
+function getMaxOfTmrw(forecast) {
+  const {tomorrow: {max : maxOfTomorrow}} = forecast; 
+  return maxOfTomorrow;
+}
+console.log(getMaxOfTmrw(LOCAL_FORECAST)); // will be 84.6
+
+
+
+
