@@ -44,4 +44,29 @@ const makeServerRequest = new Promise((resolve, reject) => {
   }
 });
 
+// 22. Handle a Rejected Promise with catch
+const makeServerRequest = new Promise((resolve, reject) => {
+  let responseFromServer = false;
+  if(responseFromServer) {
+    resolve("We got the data");
+  } else {  
+    reject("Data not received").catch((error) => {
+      console.log(error);
+    });
+  }
+});
 
+// 23. Use Destructuring Assignment to Extract Values from Objects
+const HIGH_TEMPERATURES = {
+  yesterday: 75,
+  today: 77,
+  tomorrow: 80
+};
+const {today, tomorrow} = HIGH_TEMPERATURES;
+
+// 24. Create a Module Script
+<html>
+  <body>
+    <script type="module" src="index.js"></script>
+  </body>
+</html>
