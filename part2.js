@@ -70,3 +70,20 @@ const {today, tomorrow} = HIGH_TEMPERATURES;
     <script type="module" src="index.js"></script>
   </body>
 </html>
+
+// 24A. Use export to share a code block
+const uppercaseString = (string) => {
+  return string.toUpperCase();
+}
+
+const lowercaseString = (string) => {
+  return string.toLowerCase()
+}
+
+export {uppercaseString, lowercaseString};
+
+// 24B. Now import the code blocks into another file
+import {uppercaseString, lowercaseString} from './string_functions.js';
+
+// 24C. Import all by using "import * as" syntax (this makes an object out of the other file)
+import * as stringFunctions from "./string_functions.js";
